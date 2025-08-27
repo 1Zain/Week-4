@@ -1,0 +1,221 @@
+/* Student Card Container */
+.student-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 15px 0;
+  border: 1px solid #e9ecef;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.student-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Student Header */
+.student-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f8f9fa;
+}
+
+.student-name {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.2;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.student-id {
+  background-color: #6c757d;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  letter-spacing: 0.3px;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(220, 53, 69, 0.3);
+}
+
+.delete-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(220, 53, 69, 0.3);
+}
+
+/* Grade Section */
+.grade-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.grade-label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 14px;
+  min-width: 50px;
+}
+
+.grade-input {
+  width: 80px;
+  padding: 8px 12px;
+  border: 2px solid #dee2e6;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  background-color: #fff;
+  transition: border-color 0.2s ease;
+}
+
+.grade-input:disabled {
+  background-color: #f8f9fa;
+  border-color: #ced4da;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.grade-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.grade-status {
+  background-color: #007bff;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  min-width: 30px;
+  text-align: center;
+}
+
+/* Student Info */
+.student-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.student-email,
+.student-major {
+  margin: 0;
+  font-size: 14px;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.student-email::before {
+  content: "📧";
+  font-size: 12px;
+}
+
+.student-major::before {
+  content: "🎓";
+  font-size: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .student-card {
+    padding: 15px;
+    margin: 10px 0;
+  }
+  
+  .student-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .grade-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .grade-input {
+    width: 100%;
+    max-width: 120px;
+  }
+  
+  .student-info {
+    gap: 6px;
+  }
+  
+  .delete-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Grade Color Variations */
+.grade-input[style*="color: #28a745"] + .grade-status {
+  background-color: #28a745;
+}
+
+.grade-input[style*="color: #17a2b8"] + .grade-status {
+  background-color: #17a2b8;
+}
+
+.grade-input[style*="color: #ffc107"] + .grade-status {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.grade-input[style*="color: #fd7e14"] + .grade-status {
+  background-color: #fd7e14;
+}
+
+.grade-input[style*="color: #dc3545"] + .grade-status {
+  background-color: #dc3545;
+}
